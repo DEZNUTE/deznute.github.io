@@ -5,19 +5,24 @@
 	<meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	
-	<title>StickOS v0.01</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="canonical" href="https://html5-templates.com/" />
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="script.js"></script>	
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>Windows Template</title>
 </head>
 <body>
 	<div id="desktop">
-		<div class="window" data-title="Test 1">
-			another test.
+		<div class="window" data-title="First">
+			Window content
 		</div>
-		<div class="window" data-title="test 2">
-			placeholder.
+		<div class="window" data-title="Second">
+			Second Window
 		</div>
-		<div class="window closed" data-title="test 3">
-			hi!
+		<div class="window closed" data-title="Third">
+			Third window starts closed
 		</div>
 		<div class="window" data-title="t e s t window">
 			<h1>:}</h1><pre>this is a test to see how this would work.
@@ -33,22 +38,18 @@ and so far, it has!
 		</div>
 		
 		<div id="icons">
-			<a class="openWindow" data-id="0"><pre>x---------x
-x         x
-x  test   x
-x         x
-x---------x
-</pre></a>
-			<a class="openWindow" data-id="1">placeholder.</a>
-			<a href="https://ajlstick.github.io/therpg">The RPG</a>
-			<a class="openWindow" data-id="2">another test.</a>
-			<a class="openWindow" data-id="3">oi bruv</a>
+			<a class="openWindow" data-id="0">Open first</a>
+			<a class="openWindow" data-id="1">Open second</a>
+			<a class="openWindow" data-id="2">Open third</a>
+			<a class="openWindow" data-id="3">Welcome screen</a>
 		</div>
-		
+		<a href="https://html5-templates.com/" rel="nofollow" target="_blank" id="templateLink">&copy; HTML5-Templates.com</a>	
+		<!-- You can use this template freely if you leave a visible link to HTML5-Templates.com -->
 	</div>
 </body>
 
 </html>
+--------------------
 <style>
 body  {
   background-image: url("logo.png"); }
@@ -69,7 +70,6 @@ table{border-collapse:collapse;border-spacing:0}
 hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
 input,select{vertical-align:middle}
 
-a {text-decoration:none; color: black;}
 #desktop {
 	font-family: monospace;
     position: fixed;
@@ -83,8 +83,8 @@ a {text-decoration:none; color: black;}
 }
 .window {
     position: absolute;
-    border: 1px solid #000;
-    background: white;
+    border: 2px solid #000;
+    background: #EEE;
 	border-radius: 5px;
 	z-index: 1000;
 }
@@ -195,7 +195,7 @@ a {text-decoration:none; color: black;}
 	background: #AAA;	
 }
 .taskbarPanel.minimizedTab:hover {
-	background: red;
+	background: #DDD;
 }
 .taskbarPanel.closed {
 	display: none;
