@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>test</title>
   <style>
-  #draggable { width: 120px; height: 110px; };
-#draggable2 { width: 120px; height: 110px; }
+  #draggable { left: 300px; width: 120px; height: 110px; };
+#draggabler {}
   </style>
-  <script src="script.js"></script>
-  <script src="script2.js"></script>
+  <script src="https://ajlstick.github.io/stickos/script.js"></script>
+  <script src="https://ajlstick.github.io/stickos/script2.js"></script>
   <script>
   $( function() {
     $( "#draggable" ).draggable();
@@ -17,22 +17,35 @@
   </script>
 <script>
   $( function() {
-    $( "#draggable2" ).draggable();
+    $( "#draggabler" ).draggable();
   } );
   </script>
 <style>
+html {background-color:red;}
 body, html {height:100%;}
 div.wrap {height:100%; overflow:hidden;}
 body {overflow: hidden; }
-div {overflow:hidden;}
+div {overflow:hidden; background-color:white;}
+#draggabler{width:220px}
 r{color:red; background-color:white;}
+#draggable{width:114px}
 </style>
 </head>
 <body>
  
 
-<div id="draggable2" class="ui-widget-content">
-<pre>[ ]
+<div id="draggabler" class="ui-widget-content">
+<pre>_______________________________
+||<r>X</r>|□|_| BIGGER WINDOW        |
+|‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾|
+|                             |
+|                             |
+|                             |
+|               O             |
+|              /|\            |
+|^^^^^^^^^^^^^^/ \^^^^^^^^^^^^|
+|. ‾  -   *  ~    -   *    .  |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 </div></pre>
 <div id="draggable" class="ui-widget-content">
   <pre>________________
