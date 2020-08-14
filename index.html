@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>test</title>
   <style>
-  #draggable { width: 120px; height: 110px; }
+  #draggable { width: 120px; height: 110px; };
+#draggable2 { width: 120px; height: 110px; }
   </style>
   <script src="script.js"></script>
   <script src="script2.js"></script>
   <script>
   $( function() {
     $( "#draggable" ).draggable();
+$( "#draggable2" ).draggable();
   } );
   </script>
 <style>
@@ -26,8 +28,8 @@ r{color:red; background-color:white;}
  
 
 <div id="draggable" class="ui-widget-content">
-ss
-s</div>
+<pre>[ ]
+</div></pre>
 <div id="draggable" class="ui-widget-content">
   <pre>________________
 |<r>X</r>|□|_| WINDOW |
