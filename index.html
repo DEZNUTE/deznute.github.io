@@ -8,7 +8,7 @@
   <style>
 
 black{color:black;background-color:black}
-
+bounce{border:4px solid black; padding:10px; background-color:white;}
 bg{background-color:black; color:yellow; padding:4px}
   #draggable { left: 300px; width: 120px; height: 110px; border:1px dotted black};
 #draggabler {}
@@ -34,6 +34,11 @@ background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(255,0,0,1) 10%, rg
     $( "#draggablest" ).draggable();
   } );
   </script>
+<script>
+  $( function() {
+    $( "#bounce" ).draggable();
+  } );
+  </script>
 <style>
 html {background-color:white;}
 body, html {height:100%;}
@@ -45,6 +50,7 @@ r{color:red; background-color:white;}
 #draggable{bottom: 40%; width:114px; border: 2px solid black;}
 #draggabler{left:10%;border: 2px solid black;}
 #draggablest{left:50%; top:20%;border: 2px solid black; width:200px}
+#bounce{left:3%; top:3%;border: 2px solid black; width:42px}
 </style>
 <script>
 function bluetext() {
@@ -59,7 +65,9 @@ function blacktext() {
 
 </head>
 <body>
- 
+
+<div id="bounce" class="ui-widget-content">
+<pre><bounce>:}</bounce></pre></div>
 <div id="draggablest" class="ui-widget-content">
 <pre>_______________________________
 ||<r>X</r>|□|_| OPTIONS WINDOW        
