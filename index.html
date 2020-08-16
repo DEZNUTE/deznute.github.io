@@ -1,5 +1,6 @@
 
 
+
 <!doctype html>
 <html lang="en" id="html">
 <head>
@@ -8,6 +9,7 @@
   <title>test</title>
   <style>
 
+button{border:1px solid black; background-color:lightgrey;}
 black{color:black;background-color:black}
 bounce{border:4px solid black; padding:10px; background-color:white;}
 bg{background-color:black; color:yellow; padding:4px}
@@ -51,7 +53,7 @@ r{color:red; background-color:white;}
 #draggable{bottom: 40%; width:114px; border: 2px solid black;}
 #draggabler{left:10%;border: 2px solid black;}
 #draggablest{left:50%; top:20%;border: 2px solid black; width:200px}
-#bounce{left:20%; top:30%;border: 2px solid black; width:45px; height:3}
+#bounce{left:20%; top:30%;border: 2px solid black; width:45px; height:74px}
 #bounce img:last-child {
   display: none;  
 }
@@ -62,6 +64,24 @@ r{color:red; background-color:white;}
   display: none;  
 }
 html{border:4px solid black;}
+
+
+#erase  {
+    background-color: lightgrey;
+}
+
+#erase:active {     
+    display:none;    
+}
+#erase:hover {     
+    display:none;    
+}
+
+
+
+
+
+
 
 </style>
 <script>
@@ -74,13 +94,16 @@ function blacktext() {
   document.getElementById("html").style.color = "black";
 }
 </script>
+<script>
+function myFunction() {
+  document.getElementById("body").innerHTML = "<pre><font color=white>well, you broke it.<br>you were told not to press the button, and you broke it.<br>great job.</pre>";
+}
+</script>
 
 </head>
-<body>
-<pre><font color=white> O    O
-/|\  /|\
-/ \  / \
-</pre></font>
+<body id="body">
+<pre><font color=black><marquee direction=left>- [ <b><i>StickOS > Windows 10</b></i> ]-
+</marquee></pre></font>
 <div id="bounce" class="ui-widget-content">
 <pre>
 <img src="https://ajlstick.github.io/stickos/xok.png" width=45 height=45/> 
@@ -92,9 +115,8 @@ function blacktext() {
 ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
  <button id="blue" onclick="bluetext()">blue text</button>
                 <button id="black" onclick="blacktext()">black text</button>
-
-
-
+ <button id="erase">unclickable</button>
+               <button onclick="myFunction()">do not click</button>
 
 
 
@@ -131,3 +153,4 @@ function blacktext() {
 <div id="bottom" style='position:absolute; bottom:0;'><black>_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</black>
 <bg>StickOS™<SMALL> & <font color=white>Sh<font color=cyan>i</font>ft</font> <font color=white>v0.1</font> by <font color=blue></small>AJLStick</font><black>_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</black>
 </div>
+</body>
