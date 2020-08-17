@@ -42,12 +42,38 @@ background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(255,0,0,1) 10%, rg
     $( "#bounce" ).draggable();
   } );
   </script>
+<script>
+  $( function() {
+    $( "#stick" ).draggable();
+  } );
+  </script>
+<script>
+  $( function() {
+    $( "#sticktwo" ).draggable();
+  } );
+  </script>
+<script>
+  $( function() {
+    $( "#gun" ).draggable();
+  } );
+  </script>
+<script>
+  $( function() {
+    $( "#dollar" ).draggable();
+  } );
+  </script>
+
+
 <style>
 html {background-color:white;}
 body, html {height:100%;}
 div.wrap {height:100%; overflow:hidden;}
 body {overflow: hidden; }
 div {overflow:hidden; background-color:white;}
+#stick, #sticktwo{background-color:transparent; width:22px}
+#gun{background-color:transparent; width:60px}
+#dollar{background-color:lime; width:39px}
+#stick, #gun, #dollar, #sticktwo{left:30%; top:40%;}
 #draggabler{width:220px}
 r{color:red; background-color:white;}
 #draggable{bottom: 40%; width:114px; border: 2px solid black;}
@@ -57,6 +83,16 @@ r{color:red; background-color:white;}
 #bounce img:last-child {
   display: none;  
 }
+* {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+
 #bounce:hover img:last-child {
   display: block;  
 }
@@ -99,9 +135,17 @@ function myFunction() {
   document.getElementById("body").innerHTML = "<pre><font color=white>well, you broke it.<br>you were told not to press the button, and you broke it.<br>great job.</pre>";
 }
 </script>
-
-</head>
+</head><p id="nope">
 <body id="body">
+<pre><div id="stick" class="ui-widget-content"> O
+/|\
+/ \</div>
+<div id="sticktwo" class="ui-widget-content"> Õ
+/|\
+/ \</div>
+<div id="gun" class="ui-widget-content">▄︻̷̿┻̿═━一</div>
+<font size="1px"><div id="dollar" class="ui-widget-content">[$(5)$]</div></font>
+</pre>
 <pre><font color=black><marquee direction=left>- [ <b><i>StickOS > Windows 10</b></i> ]-
 </marquee></pre></font>
 <div id="bounce" class="ui-widget-content">
