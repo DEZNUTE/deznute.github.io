@@ -1,6 +1,6 @@
 /*! 98.css v0.1.16 - https://github.com/jdan/98.css */
 html{background:silver;}
-html{ cursor: url('cursor.cur') ;}
+html{ cursor: url('cursor.cur'), url('cursor.cur');}
 body {
     font-size: 12px;
     color: #222;
