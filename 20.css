@@ -1,5 +1,5 @@
 /*! 98.css v0.1.16 - https://github.com/jdan/98.css */
-html{background:silver;}
+html{background:silver; overflow:hidden;}
 html{ cursor: url('cursor.cur'), auto;}
 button{ cursor: url('cursor.cur'), auto;}
 input{ cursor: url('cursor.cur'), auto;}
