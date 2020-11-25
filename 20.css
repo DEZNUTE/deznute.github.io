@@ -3,6 +3,7 @@ html{background:silver; overflow:hidden;}
 html{ cursor: url('cursor.cur'), auto;}
 button{ cursor: url('cursor.cur'), auto;}
 input{ cursor: url('cursor.cur'), auto;}
+window{border:1px solid black;}
 body {
     font-size: 12px;
     color: #222;
