@@ -1,68 +1,43 @@
-20.css by AJLStick, based on 98.css by jdan @ <a href="https://jdan.github.io/98.css/">https://jdan.github.io/98.css/</a><br>
-<br>
-<br>
 <html onselectstart="return false">
 <head>
- <script src="script.js"></script>
-  <script src="script2.js"></script>
-<link rel="stylesheet" href="20.css">
-</head>
+ <script src="https://sf-incorporated.github.io/script.js"></script>
+  <script src="https://sf-incorporated.github.io/script2.js"></script>
+<script>
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+  $( function() {
+    $( "#draggabletwo" ).draggable();
+  } );
+  </script>
+<script>
+function show() {
+  var x = document.getElementById("hide");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+<link rel="stylesheet" href="https://sf-incorporated.github.io/20.css">
+<Style>
 
-<div class="window" style="width: 300px">
-  <div class="title-bar">
-    <div class="title-bar-text">Window?</div>
+window{background-color:cyan; display:inline-block}
+</style>
+</head>
+<div id="draggabletwo" class="window" style="width: 150px">
+<div class="title-bar">
+    <div class="title-bar-text">PROGRAM</div>
     <div class="title-bar-controls">
       <button aria-label="Minimize"></button>
       <button aria-label="Maximize"></button>
-      <button aria-label="Close"></button>
-    </div>
-  </div>
-  <div class="window-body">
-    <p>Wow! A window!</p>
-  </div>
-</div>
-<pre>this is what < pre > text looks like.</pre>
+      <button aria-label="Close"></button></div>
+ </div>
+<pre><window> 
+<button onclick="show"></button>                         
 
-i've added color tags like <red>red</red>, <blue>blue</blue>, <green>e</green><purple>t</purple><yellow>c</yellow><b><orange>.</orange></b><br>
-
-
-<button>Clickable button!</button>
-<button disabled>I cannot be clicked.</button>
-<button><pre>and i contain a pre tag!
-
-see? line breaks!</pre></button>
-<div class="field-row">
-  <input checked type="checkbox" id="example2">
-  <label for="example2">checked box</label>
-</div>
-<div class="field-row">
-  <input disabled type="checkbox" id="example3">
-  <label for="example3">inactive box</label>
-</div>
-<div class="field-row">
-  <input checked disabled type="checkbox" id="example4">
-  <label for="example4">checked (but un un-checkable)</label>
-</div><br>
-
-<div>
-----------
-</div>
-<div class="field-row">
-  <input id="radio5" type="radio" name="first-example">
-  <label for="radio5">select me..</label>
-</div>
-<div class="field-row">
-  <input id="radio6" type="radio" name="first-example">
-  <label for="radio6">or select me.</label>
-</div>
-<div class="field-row">
-  <label for="text17">input some text here!</label>
-  <input id="text17" placeholder="go on! do it!" type="text" />
-</div>
-<red>the treeview is about the same.</red>
-<fieldset>
-  <legend>legend tag</legend>
-anything can go in here.
-<button><pre>even buttons that contain pre tags!</pre></button>
-
-
+<hide> O
+/|\              
+/ \</hide>
+</window></pre></div>
