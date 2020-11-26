@@ -1,8 +1,94 @@
 
+
 <html onselectstart="return false" id="html">
 <head>
  <script src="https://sf-incorporated.github.io/script.js"></script>
   <script src="https://sf-incorporated.github.io/script2.js"></script>
+<style>
+#wrapcube {
+    width: 250px;
+    height: 213px;
+    margin: 20px auto;
+}
+#D3Cube {
+    width: 40px;
+    height: 40px;
+    top: 50px;
+    transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
+    -moz-transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
+    -webkit-transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
+    margin: auto;
+    position: relative;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-animation: cubeRotation 1s infinite; /* Safari 4.0 - 8.0 */
+    animation: cubeRotation 1s infinite;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes cubeRotation {
+    100%   {	-webkit-transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);	}
+    100%   {	-webkit-transform: rotateX(-22deg) rotateY(-128deg) rotateZ(0deg);	}
+    100%   {	-webkit-transform: rotateX(-22deg) rotateY(-398deg) rotateZ(0deg);	}
+}
+/* Standard syntax */
+@keyframes cubeRotation {
+    100%   {	transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);	}
+    100%   {	transform: rotateX(-22deg) rotateY(-238deg) rotateZ(0deg);	}
+    100%   {	transform: rotateX(-22deg) rotateY(-398deg) rotateZ(0deg);	}
+}
+#D3Cube > div {
+    position: absolute;
+
+    width: 42px;
+    height: 112px;
+    float: left;
+    overflow: hidden;
+	opacity: 0.85;
+}
+#side1 {
+    transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(56px);
+    -moz-transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(56px);
+    -webkit-transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(56px);
+	background-color: grey;
+}
+#side2 {
+    transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(56px);
+    -moz-transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(56px);
+    -webkit-transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(56px);
+	background-color: darkgrey;
+}
+#side3 {
+    transform: translateX(0px) translateY(0px) translateZ(56px);
+    -moz-transform: translateX(0px) translateY(0px) translateZ(56px);
+    -webkit-transform: translateX(0px) translateY(0px) translateZ(56px);
+	background-color: grey;
+}
+#side4 {
+    transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(56px);
+    -moz-transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(56px);
+    -webkit-transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(56px);
+	background-color: darkgrey;
+}
+#side5 {
+    transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(56px);
+    -moz-transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(56px);
+    -webkit-transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(56px);
+	background-color: grey;
+}
+#side6 {
+    transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(56px);
+    -moz-transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(56px);
+    -webkit-transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(56px);
+	background-color: grey;
+}
+
+side2 and side4 missing on purpose
+
+</style>
+	
 <script>
   $( function() {
     $( "#draggable" ).draggable();
@@ -45,7 +131,15 @@ html{display:grid;}
 #bar{vertical-align: bottom; border:2px solid black;}
 </style>
 </head>
-<body>
+<body><div id="D3Cube">
+		<div id="side1"></div>
+		
+		<div id="side3"></div>
+		
+		<div id="side5"></div>
+		<div id="side6"></div>
+	
+</div>
 <div id="draggable" class="window" style="width: 150px">
 <div class="title-bar">
     <div class="title-bar-text">PROGRAM</div>
@@ -80,10 +174,12 @@ __
     <div class="title-bar-text">PANEL WINDOW</div>
     <div class="title-bar-controls">
       <button aria-label="Close"></button></div>
- </div><div id="panel">(select a control catergory)</div>
+ </div><div id="panel">(select a control catergory)
+</div>
 <div id="style"></div>
 </div>
 
 <div id="bar">SF-INFORPORATED 2020</div>
+
 
 
