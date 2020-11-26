@@ -1,4 +1,5 @@
-<html onselectstart="return false">
+
+<html onselectstart="return false" id="html">
 <head>
  <script src="https://sf-incorporated.github.io/script.js"></script>
   <script src="https://sf-incorporated.github.io/script2.js"></script>
@@ -9,24 +10,42 @@
   $( function() {
     $( "#draggabletwo" ).draggable();
   } );
+  $( function() {
+    $( "#draggablethree" ).draggable();
+  } );
+  $( function() {
+    $( "#draggablefour" ).draggable();
+  } );
   </script>
 <script>
+function users() {
+document.getElementById("panel").innerHTML = "<br><center>[<blue>USERS</blue>]<br><red>you do not have permission to change these settings.</red></center>";
+}
+function styl() {
+document.getElementById("panel").innerHTML = "<br><center>[<orange>STYLE</orange>]<br><red>you do not have permission to change these settings.</red></center>";
+}
+</script>
+<script>
+function red()
+document.getElementById("body").style.color = "red";
+</script>
+
+
+<script>
 function show() {
-  var x = document.getElementById("hide");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+document.getElementById("hide").innerHTML = "<button onclick='show()'>            </button><br><br>/|\\<br>  / \\ O<br>";
 }
 </script>
 <link rel="stylesheet" href="https://sf-incorporated.github.io/20.css">
 <Style>
 #draggabletwo{left:170px; bottom:110px;}
+#draggablethree{left:10px; bottom:100px;}
 window{background-color:silver; display:inline-block}
 html{display:grid;}
+#bar{vertical-align: bottom; border:2px solid black;}
 </style>
 </head>
+<body>
 <div id="draggable" class="window" style="width: 150px">
 <div class="title-bar">
     <div class="title-bar-text">PROGRAM</div>
@@ -49,11 +68,22 @@ html{display:grid;}
       <button aria-label="Close"></button></div>
  </div>
 <pre><center>
-<window><button>USERS</button>
+<window><button onclick="users()">USERS</button>
 O
 /‾\
- ‾‾‾ </window> <window><button>SOUND</button>
+ ‾‾‾ </window> <window><button onclick="styl()">STYLE</button>
 __
 |0|
- ‾‾ </window></center>
-</center></pre></div>
+ ‾‾ </window></center></pre></div>
+<div id="draggablethree" class="window" style="width: 170px">
+<div class="title-bar">
+    <div class="title-bar-text">PANEL WINDOW</div>
+    <div class="title-bar-controls">
+      <button aria-label="Close"></button></div>
+ </div><div id="panel">(select a control catergory)</div>
+<div id="style"></div>
+</div>
+
+<div id="bar">SF-INFORPORATED 2020</div>
+
+
