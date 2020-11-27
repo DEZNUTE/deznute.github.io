@@ -5,7 +5,9 @@
 <head>
  <script src="https://sf-incorporated.github.io/script.js"></script>
   <script src="https://sf-incorporated.github.io/script2.js"></script>
+
 <style>
+
 #wrapcube {
     width: 250px;
     height: 213px;
@@ -59,7 +61,7 @@
     transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(56px);
     -moz-transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(56px);
     -webkit-transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(56px);
-	background-color: darkgrey;
+	background-color: transparent;
 }
 #side3 {
     transform: translateX(0px) translateY(0px) translateZ(56px);
@@ -123,9 +125,11 @@ document.getElementById("body").style.color = "red";
 <script>
 function show() {
 document.getElementById("hide").innerHTML = "<button>            </button><br><br>/|\\<br>  / \\ O<br>";
-};
-function hideD{
-  var x = document.getElementById("hide");
+}
+</script>
+<script>
+function break() {
+  var x = document.getElementById("D3Cube");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
@@ -144,7 +148,7 @@ html{display:grid;}
 </head>
 <body><div id="D3Cube">
 		<div id="side1"></div>
-		
+		<div id="side2">asa</div>
 		<div id="side3"></div>
 		
 		<div id="side5"></div>
