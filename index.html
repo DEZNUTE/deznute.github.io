@@ -1,5 +1,6 @@
 
 
+
 <html onselectstart="return false" id="html">
 <head>
  <script src="https://sf-incorporated.github.io/script.js"></script>
@@ -107,6 +108,8 @@ side2 and side4 missing on purpose
 function users() {
 document.getElementById("panel").innerHTML = "<br><center>[<blue>USERS</blue>]<br><red>you do not have permission to change these settings.</red></center>";
 }
+
+}
 function styl() {
 document.getElementById("panel").innerHTML = "<br><center>[<orange>STYLE</orange>]<br><red>you do not have permission to change these settings.</red></center>";
 }
@@ -119,7 +122,15 @@ document.getElementById("body").style.color = "red";
 
 <script>
 function show() {
-document.getElementById("hide").innerHTML = "<button onclick='show()'>            </button><br><br>/|\\<br>  / \\ O<br>";
+document.getElementById("hide").innerHTML = "<button>            </button><br><br>/|\\<br>  / \\ O<br>";
+};
+function hideD{
+  var x = document.getElementById("hide");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
 </script>
 <link rel="stylesheet" href="https://sf-incorporated.github.io/20.css">
@@ -168,7 +179,16 @@ O
  ‾‾‾ </window> <window><button onclick="styl()">STYLE</button>
 __
 |0|
- ‾‾ </window></center></pre></div>
+ ‾‾ </window>
+
+ <window><button onclick="break()"><small>BREAK
+EVERYTHING</small></button>
+___
+|:(|
+ ‾‾‾ </window> <window><button onclick="styl()">?</button>
+__
+|?|
+ ‾‾ </window> </center></pre></div>
 <div id="draggablethree" class="window" style="width: 170px">
 <div class="title-bar">
     <div class="title-bar-text">PANEL WINDOW</div>
