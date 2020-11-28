@@ -43,6 +43,9 @@ document.getElementById("hide").innerHTML = "<button>            </button><br><b
 function bold() {
 document.getElementById("bodytwo").style.fontWeight = "900";
 }
+function none() {
+document.getElementById("bodytwo").innerHTML = "you broke it.<br><br><br> great job.<br><br><br><a href=' '>reload</a>";
+}
 function unbold() {
 document.getElementById("bodytwo").style.fontWeight = "400";
 }
@@ -112,7 +115,7 @@ ___
 __
 |?|
  ‾‾ </window> </center></pre></div>
-<div id="draggablefour" class="window" style="width: 230px">
+<div id="draggablefour" class="window" style="width: 250px">
 <div class="title-bar">
     <div class="title-bar-text">STYLE SETTINGS</div>
     <div class="title-bar-controls">
@@ -120,13 +123,13 @@ __
       <button aria-label="Maximize"></button>
       <button aria-label="Close"></button></div>
  </div>
-<pre><button onclick="blue()">EXEC BLUE.TXC</button> <button onclick="red()">EXEC RED.TXC</button>
+<pre><button onclick="blue()">EXEC BLUE.TXC</button>    <button onclick="red()">EXEC RED.TXC</button>
 
-<button onclick="yellow()">EXEC YELLOW.TXC</button> <button onclick="white()">EXEC NONE.TXC</button>
+<button onclick="yellow()">EXEC YELLOW.TXC</button>   <button onclick="white()">EXEC NONE.TXC</button>
 
 <button onclick="black()">EXEC BLACK.TXC</button> <button onclick="bold()">EXEC BOLD.TXC</button>
 
-<button onclick="unbold()">EXEC UNBOLD.TXC</button> <button onclick="bold()">EXEC BOLD.TXC</button>
+<button onclick="unbold()">EXEC UNBOLD.TXC</button> <button onclick="none()">EXEC NOTHING.TXC</button>
 </pre></div>
 
 <div id="draggablethree" class="window" style="width: 170px">
