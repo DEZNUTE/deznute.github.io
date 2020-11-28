@@ -1,96 +1,9 @@
-
-
-
-<html onselectstart="return false" id="html">
+<html onselectstart="return false">
 <head>
  <script src="https://sf-incorporated.github.io/script.js"></script>
   <script src="https://sf-incorporated.github.io/script2.js"></script>
 
-<style>
 
-#wrapcube {
-    width: 250px;
-    height: 213px;
-    margin: 20px auto;
-}
-#D3Cube {
-    width: 40px;
-    height: 40px;
-    top: 50px;
-    transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
-    -moz-transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
-    -webkit-transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
-    margin: auto;
-    position: relative;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-animation: cubeRotation 1s infinite; /* Safari 4.0 - 8.0 */
-    animation: cubeRotation 1s infinite;
-}
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes cubeRotation {
-    100%   {	-webkit-transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);	}
-    100%   {	-webkit-transform: rotateX(-22deg) rotateY(-128deg) rotateZ(0deg);	}
-    100%   {	-webkit-transform: rotateX(-22deg) rotateY(-398deg) rotateZ(0deg);	}
-}
-/* Standard syntax */
-@keyframes cubeRotation {
-    100%   {	transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);	}
-    100%   {	transform: rotateX(-22deg) rotateY(-238deg) rotateZ(0deg);	}
-    100%   {	transform: rotateX(-22deg) rotateY(-398deg) rotateZ(0deg);	}
-}
-#D3Cube > div {
-    position: absolute;
-
-    width: 42px;
-    height: 112px;
-    float: left;
-    overflow: hidden;
-	opacity: 0.85;
-}
-#side1 {
-    transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(56px);
-    -moz-transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(56px);
-    -webkit-transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(56px);
-	background-color: grey;
-}
-#side2 {
-    transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(56px);
-    -moz-transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(56px);
-    -webkit-transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(56px);
-	background-color: transparent;
-}
-#side3 {
-    transform: translateX(0px) translateY(0px) translateZ(56px);
-    -moz-transform: translateX(0px) translateY(0px) translateZ(56px);
-    -webkit-transform: translateX(0px) translateY(0px) translateZ(56px);
-	background-color: grey;
-}
-#side4 {
-    transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(56px);
-    -moz-transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(56px);
-    -webkit-transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(56px);
-	background-color: darkgrey;
-}
-#side5 {
-    transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(56px);
-    -moz-transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(56px);
-    -webkit-transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(56px);
-	background-color: grey;
-}
-#side6 {
-    transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(56px);
-    -moz-transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(56px);
-    -webkit-transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(56px);
-	background-color: grey;
-}
-
-side2 and side4 missing on purpose
-
-</style>
 	
 <script>
   $( function() {
@@ -111,16 +24,14 @@ function users() {
 document.getElementById("panel").innerHTML = "<br><center>[<blue>USERS</blue>]<br><red>you do not have permission to change these settings.</red></center>";
 }
 
-}
 function styl() {
 document.getElementById("panel").innerHTML = "<br><center>[<orange>STYLE</orange>]<br><red>you do not have permission to change these settings.</red></center>";
 }
-</script>
-<script>
-function red()
-document.getElementById("body").style.color = "red";
-</script>
 
+function broken() {
+document.getElementById("bodytwo").innerHTML = "";
+}
+</script>
 
 <script>
 function show() {
@@ -128,33 +39,41 @@ document.getElementById("hide").innerHTML = "<button>            </button><br><b
 }
 </script>
 <script>
-function break() {
-  var x = document.getElementById("D3Cube");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+
+function bold() {
+document.getElementById("bodytwo").style.fontWeight = "900";
+}
+function unbold() {
+document.getElementById("bodytwo").style.fontWeight = "400";
+}
+function blue() {
+document.getElementById("bodytwo").style.color = "blue";
+}
+function white() {
+document.getElementById("bodytwo").style.color = "transparent";
+}
+function red() {
+document.getElementById("bodytwo").style.color = "red";
+}
+function black() {
+document.getElementById("bodytwo").style.color = "black";
+}
+function yellow() {
+document.getElementById("bodytwo").style.color = "yellow";
 }
 </script>
+
 <link rel="stylesheet" href="https://sf-incorporated.github.io/20.css">
 <Style>
 #draggabletwo{left:170px; bottom:110px;}
 #draggablethree{left:10px; bottom:100px;}
+#draggablefour{left:50px; bottom:190px;}
 window{background-color:silver; display:inline-block}
 html{display:grid;}
 #bar{vertical-align: bottom; border:2px solid black;}
 </style>
 </head>
-<body><div id="D3Cube">
-		<div id="side1"></div>
-		<div id="side2">asa</div>
-		<div id="side3"></div>
-		
-		<div id="side5"></div>
-		<div id="side6"></div>
-	
-</div>
+<body id="bodytwo">
 <div id="draggable" class="window" style="width: 150px">
 <div class="title-bar">
     <div class="title-bar-text">PROGRAM</div>
@@ -185,7 +104,7 @@ __
 |0|
  ‾‾ </window>
 
- <window><button onclick="break()"><small>BREAK
+ <window><button onclick="broken()"><small>BREAK
 EVERYTHING</small></button>
 ___
 |:(|
@@ -193,6 +112,23 @@ ___
 __
 |?|
  ‾‾ </window> </center></pre></div>
+<div id="draggablefour" class="window" style="width: 230px">
+<div class="title-bar">
+    <div class="title-bar-text">STYLE SETTINGS</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button></div>
+ </div>
+<pre><button onclick="blue()">EXEC BLUE.TXC</button> <button onclick="red()">EXEC RED.TXC</button>
+
+<button onclick="yellow()">EXEC YELLOW.TXC</button> <button onclick="white()">EXEC NONE.TXC</button>
+
+<button onclick="black()">EXEC BLACK.TXC</button> <button onclick="bold()">EXEC BOLD.TXC</button>
+
+<button onclick="unbold()">EXEC UNBOLD.TXC</button> <button onclick="bold()">EXEC BOLD.TXC</button>
+</pre></div>
+
 <div id="draggablethree" class="window" style="width: 170px">
 <div class="title-bar">
     <div class="title-bar-text">PANEL WINDOW</div>
@@ -204,6 +140,7 @@ __
 </div>
 
 <div id="bar">SF-INFORPORATED 2020</div>
+
 
 
 
