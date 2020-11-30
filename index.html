@@ -4,7 +4,23 @@
   <script src="https://sf-incorporated.github.io/script2.js"></script>
 
 
-	
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
 <script>
   $( function() {
     $( "#draggable" ).draggable();
@@ -17,6 +33,9 @@
   } );
   $( function() {
     $( "#draggablefour" ).draggable();
+  } );
+  $( function() {
+    $( "#draggablefive" ).draggable();
   } );
   </script>
 <script>
@@ -71,12 +90,13 @@ document.getElementById("bodytwo").style.color = "yellow";
 #draggabletwo{left:170px; bottom:110px;}
 #draggablethree{left:10px; bottom:100px;}
 #draggablefour{left:50px; bottom:190px;}
+#draggablefive{left:90px;bottom:500px;}
 window{background-color:silver; display:inline-block}
 html{display:grid;}
 #bar{vertical-align: bottom; border:2px solid black;}
 </style>
 </head>
-<body id="bodytwo">
+<body onload="startTime()" id="bodytwo">
 <div id="draggable" class="window" style="width: 150px">
 <div class="title-bar">
     <div class="title-bar-text">PROGRAM</div>
@@ -114,7 +134,7 @@ ___
 __
 |?|
  ‾‾ </window> </center></pre></div>
-<div id="draggablefour" class="window" style="width: 250px">
+<div id="draggablefour" class="window" style="width: 290px">
 <div class="title-bar">
     <div class="title-bar-text">STYLE SETTINGS</div>
     <div class="title-bar-controls">
@@ -140,7 +160,13 @@ __
 </div>
 <div id="style"></div>
 </div>
-
+<div id="draggablefive" class="window" style="width: 170px">
+<div class="title-bar">
+    <div class="title-bar-text">CLOCK</div>
+    <div class="title-bar-controls">
+      <button aria-label="Close"></button></div>
+ </div><center><div id="txt"></div></center>
+</div>
 <div id="bar">SF-INFORPORATED 2020</div>
 
 
