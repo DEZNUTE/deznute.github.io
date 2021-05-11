@@ -37,6 +37,9 @@ function checkTime(i) {
   $( function() {
     $( "#draggablefive" ).draggable();
   } );
+  $( function() {
+    $( "#draggablesix" ).draggable();
+  } );
   </script>
 <script>
 function users() {
@@ -91,11 +94,13 @@ document.getElementById("bodytwo").style.color = "yellow";
 #draggablethree{left:10px; bottom:100px;}
 #draggablefour{left:50px; bottom:190px;}
 #draggablefive{left:90px;bottom:500px;}
+#draggablesix{left:180px;bottom:110px;}
 window{background-color:silver; display:inline-block}
 html{display:grid;}
 #bar{vertical-align: bottom; border:2px solid black;}
 </style>
 </head>
+
 <body onload="startTime()" id="bodytwo">
 <div id="draggable" class="window" style="width: 150px">
 <div class="title-bar">
@@ -167,8 +172,7 @@ __
       <button aria-label="Close"></button></div>
  </div><center><div id="txt"></div></center>
 </div>
+<div id="draggablesix"><iframe src="https://ajlstick.42web.io/users"></div>
 <div id="bar">SF-INFORPORATED 2020</div>
-
-
 
 
