@@ -36,7 +36,7 @@
             results.push((new Date().getTime() - x.d) / 1000);
           };
           const result = (1 / (results.reduce((a, b) => a + b) / results.length)).toFixed(2); // honestly i have no idea if i'm calculating this right but it's 1am and i don't feel like fixing it
-          stats.innerHTML += "Your internet download speed is: " + result + "MB/s (" + (result * 8) + ") Mbps";
+          stats.innerHTML += "Your internet download speed is: " + result + "MB/s (" + (result * 8) + " Mbps)";
           tb.innerHTML = "Run test again";
           tb.disabled = false;
         };
