@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Deznute Internet Speed Test</title>
+  </head>
+  <body style="font-family: monospace;">
+    <h1 style="margin-bottom: 0;">How fast is your internet?</h1>
+    <p>Test it with Deznute's new (and totally legit) Internet Speed Test™!</p>
+    <hr>
+    <button id="testbutton" disabled>Loading...</button>
+    <p id="stats"></p>
+    <script>
+      if (location.pathname !== "/speedtest.html") {
+        location.assign("/speedtest.html");
+      };
+      window.onload = ()=>{
+        const tb = document.getElementById("testbutton");
+        const stats = document.getElementById("stats");
+        let ip = new XMLHttpRequest();
+        ip.open("GET", "http://api.ipify.org", false);
+        ip.send();
+        ip = ip.responseText;
+        tb.onclick = ()=>{
+          tb.disabled = true;
+          tb.innerHTML = "Testing...";
+          stats.innerHTML = "";
+          stats.innerHTML += "Testing internet speed. The page may freeze several times during this test. Approximately 26MB of data will be received.<br>" + location.host + " -> " + ip + "<br><br>";
+          const results = [];
+          for (let i = 1; i <= 25; i++) {
+            const x = new XMLHttpRequest();
+            x.open("GET", "./speedtest-1MB.bin", false);
+            x.d = new Date().getTime();
+            x.send();
+            results.push((new Date().getTime() - x.d) / 1000);
+          };
+          // honestly i have no idea if i'm calculating this right but it's 1am and i don't feel like fixing it
+          stats.innerHTML += "Your internet download speed is: " + (1 / (results.reduce((a, b) => a + b) / results.length)).toFixed(2) + "MB/s";
+          tb.innerHTML = "Run test again";
+          tb.disabled = false;
+        };
+        tb.innerHTML = "Run test";
+        tb.disabled = false;
+      };
+    </script>
+  </body>
+</html>
