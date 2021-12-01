@@ -18,7 +18,7 @@
         const tb = document.getElementById("testbutton");
         const stats = document.getElementById("stats");
         let ip = new XMLHttpRequest();
-        ip.open("GET", "http://api.ipify.org", false);
+        ip.open("GET", "https://api.ipify.org", false);
         ip.send();
         ip = ip.responseText;
         tb.onclick = ()=>{
