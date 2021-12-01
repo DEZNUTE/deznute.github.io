@@ -29,7 +29,8 @@
           const results = [];
           for (let i = 1; i <= 25; i++) {
             const x = new XMLHttpRequest();
-            x.open("GET", "./speedtest-1MB.bin", false);
+            x.open("GET", "./speedtest-1MB.bin?rand=" + Math.random(), false);
+            x.setRequestHeader("Cache-Control", "no-store");
             x.d = new Date().getTime();
             x.send();
             results.push((new Date().getTime() - x.d) / 1000);
